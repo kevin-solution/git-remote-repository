@@ -2,15 +2,15 @@ for Y in {2013..2019}
 do
   mkdir $Y
   cd $Y
-  for M in {03..03}
+  for M in {1..12}
   do
     mkdir $M
     cd $M
-    for D in {30..30}
+    for D in {1..28}
     do
       mkdir $D
       cd $D
-      for i in {01..10}
+      for i in {1..5}
       do
         echo "$i on $M/$D/$Y" > commit.md
         export GIT_COMMITTER_DATE="$Y-$M-$D 12:$i:00"
